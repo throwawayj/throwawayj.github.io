@@ -1,0 +1,6 @@
+Colors from light to dark
+Body #627D96
+#A3B2BF
+#7E93A6
+#486886
+#2E5373
