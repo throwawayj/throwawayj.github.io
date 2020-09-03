@@ -6,9 +6,9 @@ var chart = AmCharts.makeChart("chartdiv", {
         "color": "#F18F21",
         "competency": 95
     },  {
-        "software": "R.H.E.L 6",
+        "software": "Bamboo Build Server",
         "color": "#F18F21",
-        "competency": 90
+        "competency": 85
     },  {
         "software": "R.H.E.L 7",
         "color": "#F18F21",
@@ -46,9 +46,9 @@ var chart = AmCharts.makeChart("chartdiv", {
         "color": "#F18F21",
         "competency": 85
     }, {
-        "software": "Bamboo Build Server",
+        "software": "Kubernetes",
         "color": "#F18F21",
-        "competency": 85
+        "competency": 60
     }],
     "valueAxes": [{
         "gridColor":"#FFFFFF",
