@@ -16,7 +16,8 @@ At Usana, I have leanred much in the way of Javascript, Angular, and React to he
 - Reading
 - Gaming
 - Running (I try my hardest but have never been good at it)
-- Fall and Winter
+- Fall
+- Winter
 
 # Travel / Geography
 
