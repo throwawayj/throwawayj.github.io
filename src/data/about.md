@@ -4,7 +4,7 @@ I started my career in I.T. as a helpdesk technician. Although this introductory
 
 # Currently
 
-At Usana, I have leanred much in the way of Javascript, Angular, and React to help develop in house applications used by our developers. These apps help facilitate the ease of deployments to environments and increase velocity. I have spent alot of time refining the C.I./C.D. pipeline. Specifically integrating automated testing post deployment to eventually reach a true C.I./C.D. Kubernetes has also been a huge focus of my job at Usana. Setting up automated deployments with helm charts to provisioning locally hosted Kubernetes Clusters.
+At Usana, I have learned much in the way of Javascript, Angular, and React to help develop in house applications used by our developers. These apps help facilitate the ease of deployments to environments and increase velocity. I have spent alot of time refining the C.I./C.D. pipeline. Specifically integrating automated testing post deployment to eventually reach a true C.I./C.D. Kubernetes has also been a huge focus of my job at Usana. Setting up automated deployments with helm charts to provisioning locally hosted Kubernetes Clusters.
 
 # Some history
 
