@@ -1,0 +1,5 @@
+git checkout builder
+make your changes on that branch
+npm install
+npm run predeploy
+recurslively copy eveyting from the build directory after this predeploy into the branch called gh-pages
