@@ -13,7 +13,7 @@ const data = [
   {
     title: 'Devops Deployment App',
     subtitle: 'DevOps deployer app for pipeline environments',
-    image: '/images/projects/hadesapp.png',
+    image: '/images/projects/charonapp.png',
     date: '2021-01-01',
     desc:
       'Built for DevOps to cut release branches using Bitbucket API and Monitor builds wiht Bamboo Api.'
