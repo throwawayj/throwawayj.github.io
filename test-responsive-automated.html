@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automated Responsive Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .test-results {
+      margin: 20px 0;
+    }
+    
+    .test-case {
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .test-case.pass {
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+    }
+    
+    .test-case.fail {
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+    }
+    
+    .test-case.pending {
+      background-color: #fff3cd;
+      border: 1px solid #ffeaa7;
+      color: #856404;
+    }
+    
+    .icon {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    
+    h1 {
+      color: #2c3e50;
+    }
+    
+    h2 {
+      color: #34495e;
+      margin-top: 30px;
+    }
+    
+    .summary {
+      background-color: #ecf0f1;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    
+    .summary h3 {
+      margin-top: 0;
+    }
+    
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px 5px;
+    }
+    
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Automated Responsive Design Tests</h1>
+  <p>This page automatically tests the responsive behavior of the resume website.</p>
+  
+  <button onclick="runTests()">Run Tests</button>
+  <button onclick="location.reload()">Reset</button>
+  
+  <div class="summary" id="summary" style="display: none;">
+    <h3>Test Summary</h3>
+    <p id="summary-text"></p>
+  </div>
+  
+  <div class="test-results" id="results"></div>
+  
+  <script>
+    const tests = [];
+    let passCount = 0;
+    let failCount = 0;
+    
+    function addTest(name, status, message) {
+      tests.push({ name, status, message });
+      if (status === 'pass') passCount++;
+      if (status === 'fail') failCount++;
+    }
+    
+    function displayResults() {
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = '<h2>Test Results</h2>';
+      
+      tests.forEach(test => {
+        const testDiv = document.createElement('div');
+        testDiv.className = `test-case ${test.status}`;
+        
+        const icon = test.status === 'pass' ? '✓' : test.status === 'fail' ? '✗' : '⚠';
+        testDiv.innerHTML = `
+          <span class="icon">${icon}</span>
+          <div>
+            <strong>${test.name}</strong>
+            ${test.message ? `<br><small>${test.message}</small>` : ''}
+          </div>
+        `;
+        
+        resultsDiv.appendChild(testDiv);
+      });
+      
+      // Show summary
+      const summaryDiv = document.getElementById('summary');
+      const summaryText = document.getElementById('summary-text');
+      summaryDiv.style.display = 'block';
+      summaryText.innerHTML = `
+        <strong>Total Tests:</strong> ${tests.length}<br>
+        <strong style="color: #27ae60;">Passed:</strong> ${passCount}<br>
+        <strong style="color: #e74c3c;">Failed:</strong> ${failCount}<br>
+        <strong>Success Rate:</strong> ${((passCount / tests.length) * 100).toFixed(1)}%
+      `;
+    }
+    
+    async function runTests() {
+      tests.length = 0;
+      passCount = 0;
+      failCount = 0;
+      
+      document.getElementById('results').innerHTML = '<p>Running tests...</p>';
+      
+      // Test 1: Check if CSS file exists and loads
+      try {
+        const response = await fetch('css/styles.css');
+        if (response.ok) {
+          addTest('CSS File Loads', 'pass', 'styles.css loaded successfully');
+        } else {
+          addTest('CSS File Loads', 'fail', 'Failed to load styles.css');
+        }
+      } catch (error) {
+        addTest('CSS File Loads', 'fail', error.message);
+      }
+      
+      // Test 2: Check for mobile media query
+      try {
+        const response = await fetch('css/styles.css');
+        const cssText = await response.text();
+        
+        if (cssText.includes('@media (max-width: 767px)')) {
+          addTest('Mobile Media Query Present', 'pass', 'Found @media (max-width: 767px)');
+        } else {
+          addTest('Mobile Media Query Present', 'fail', 'Mobile media query not found');
+        }
+      } catch (error) {
+        addTest('Mobile Media Query Present', 'fail', error.message);
+      }
+      
+      // Test 3: Check for tablet media query
+      try {
+        const response = await fetch('css/styles.css');
+        const cssText = await response.text();
+        
+        if (cssText.includes('@media (min-width: 768px)')) {
+          addTest('Tablet Media Query Present', 'pass', 'Found @media (min-width: 768px)');
+        } else {
+          addTest('Tablet Media Query Present', 'fail', 'Tablet media query not found');
+        }
+      } catch (error) {
+        addTest('Tablet Media Query Present', 'fail', error.message);
+      }
+      
+      // Test 4: Check for desktop media query
+      try {
+        const response = await fetch('css/styles.css');
+        const cssText = await response.text();
+        
+        if (cssText.includes('@media (min-width: 1024px)')) {
+          addTest('Desktop Media Query Present', 'pass', 'Found @media (min-width: 1024px)');
+        } else {
+          addTest('Desktop Media Query Present', 'fail', 'Desktop media query not found');
+        }
+      } catch (error) {
+        addTest('Desktop Media Query Present', 'fail', error.message);
+      }
+      
+      // Test 5: Check viewport meta tag
+      const viewportMeta = document.querySelector('meta[name="viewport"]');
+      if (viewportMeta && viewportMeta.content.includes('width=device-width')) {
+        addTest('Viewport Meta Tag', 'pass', 'Viewport meta tag configured correctly');
+      } else {
+        addTest('Viewport Meta Tag', 'fail', 'Viewport meta tag missing or incorrect');
+      }
+      
+      // Test 6: Check navigation accessibility
+      try {
+        const response = await fetch('index.html');
+        const htmlText = await response.text();
+        
+        if (htmlText.includes('<nav') && htmlText.includes('id="navbar"')) {
+          addTest('Navigation Element Present', 'pass', 'Navigation element found in HTML');
+        } else {
+          addTest('Navigation Element Present', 'fail', 'Navigation element not found');
+        }
+      } catch (error) {
+        addTest('Navigation Element Present', 'fail', error.message);
+      }
+      
+      // Test 7: Check responsive image sizing
+      try {
+        const response = await fetch('css/styles.css');
+        const cssText = await response.text();
+        
+        const has150px = cssText.includes('width: 150px');
+        const has180px = cssText.includes('width: 180px');
+        const has200px = cssText.includes('width: 200px');
+        
+        if (has150px && has180px && has200px) {
+          addTest('Responsive Image Sizes', 'pass', 'Found 150px, 180px, and 200px image sizes');
+        } else {
+          addTest('Responsive Image Sizes', 'fail', 'Missing responsive image sizes');
+        }
+      } catch (error) {
+        addTest('Responsive Image Sizes', 'fail', error.message);
+      }
+      
+      // Test 8: Check mobile-first approach (default styles before media queries)
+      try {
+        const response = await fetch('css/styles.css');
+        const cssText = await response.text();
+        
+        const firstMediaQueryIndex = cssText.indexOf('@media');
+        const navbarIndex = cssText.indexOf('#navbar');
+        
+        if (navbarIndex < firstMediaQueryIndex) {
+          addTest('Mobile-First Approach', 'pass', 'Base styles defined before media queries');
+        } else {
+          addTest('Mobile-First Approach', 'fail', 'Media queries appear before base styles');
+        }
+      } catch (error) {
+        addTest('Mobile-First Approach', 'fail', error.message);
+      }
+      
+      // Test 9: Check for responsive section padding
+      try {
+        const response = await fetch('css/styles.css');
+        const cssText = await response.text();
+        
+        if (cssText.includes('padding: var(--spacing-md)') && 
+            cssText.includes('padding: var(--spacing-lg)') && 
+            cssText.includes('padding: var(--spacing-xl)')) {
+          addTest('Responsive Section Padding', 'pass', 'Different padding values for breakpoints');
+        } else {
+          addTest('Responsive Section Padding', 'fail', 'Missing responsive padding values');
+        }
+      } catch (error) {
+        addTest('Responsive Section Padding', 'fail', error.message);
+      }
+      
+      // Test 10: Check for contact links layout changes
+      try {
+        const response = await fetch('css/styles.css');
+        const cssText = await response.text();
+        
+        if (cssText.includes('flex-direction: column') && 
+            cssText.includes('flex-direction: row')) {
+          addTest('Responsive Contact Links Layout', 'pass', 'Contact links change from column to row');
+        } else {
+          addTest('Responsive Contact Links Layout', 'fail', 'Missing flex-direction changes');
+        }
+      } catch (error) {
+        addTest('Responsive Contact Links Layout', 'fail', error.message);
+      }
+      
+      displayResults();
+    }
+    
+    // Auto-run tests on page load
+    window.addEventListener('load', () => {
+      setTimeout(runTests, 500);
+    });
+  </script>
+</body>
+</html>

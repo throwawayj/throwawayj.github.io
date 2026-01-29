@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Test - James D. Gardner Resume</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .test-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      border: 2px solid #3498db;
+      border-radius: 8px;
+    }
+    
+    .test-section h2 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    
+    .iframe-container {
+      margin: 20px 0;
+      border: 2px solid #95a5a6;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    iframe {
+      border: none;
+      display: block;
+    }
+    
+    .breakpoint-info {
+      background-color: #ecf0f1;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    
+    .pass {
+      color: #27ae60;
+    }
+    
+    .info {
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Design Test - Resume Website</h1>
+  <p>This page tests the responsive behavior at different breakpoints.</p>
+  
+  <!-- Mobile Test -->
+  <div class="test-section">
+    <h2>Mobile Layout (&lt; 768px)</h2>
+    <div class="breakpoint-info">Testing at 375px width (typical mobile)</div>
+    <div class="iframe-container">
+      <iframe src="index.html" width="375" height="600"></iframe>
+    </div>
+    <p class="info">✓ Navigation should be compact with smaller text</p>
+    <p class="info">✓ Profile image should be 150px</p>
+    <p class="info">✓ Contact links should stack vertically</p>
+    <p class="info">✓ All sections should have reduced padding</p>
+  </div>
+  
+  <!-- Tablet Test -->
+  <div class="test-section">
+    <h2>Tablet Layout (768px - 1023px)</h2>
+    <div class="breakpoint-info">Testing at 768px width (typical tablet)</div>
+    <div class="iframe-container">
+      <iframe src="index.html" width="768" height="600"></iframe>
+    </div>
+    <p class="info">✓ Navigation should have medium spacing</p>
+    <p class="info">✓ Profile image should be 180px</p>
+    <p class="info">✓ Contact links should be horizontal</p>
+    <p class="info">✓ Sections should have medium padding</p>
+  </div>
+  
+  <!-- Desktop Test -->
+  <div class="test-section">
+    <h2>Desktop Layout (≥ 1024px)</h2>
+    <div class="breakpoint-info">Testing at 1024px width (typical desktop)</div>
+    <div class="iframe-container">
+      <iframe src="index.html" width="1024" height="600"></iframe>
+    </div>
+    <p class="info">✓ Navigation should have full spacing</p>
+    <p class="info">✓ Profile image should be 200px</p>
+    <p class="info">✓ Contact links should be horizontal with large gaps</p>
+    <p class="info">✓ Sections should have maximum padding</p>
+    <p class="info">✓ Content should be centered with max-width</p>
+  </div>
+  
+  <div class="test-section">
+    <h2>Manual Testing Instructions</h2>
+    <ol>
+      <li>Open <code>index.html</code> in a browser</li>
+      <li>Open browser DevTools (F12)</li>
+      <li>Toggle device toolbar (Ctrl+Shift+M or Cmd+Shift+M)</li>
+      <li>Test at these widths:
+        <ul>
+          <li>375px (Mobile)</li>
+          <li>768px (Tablet)</li>
+          <li>1024px (Desktop)</li>
+        </ul>
+      </li>
+      <li>Verify:
+        <ul>
+          <li>Navigation is accessible and readable at all sizes</li>
+          <li>Text remains readable</li>
+          <li>Images scale appropriately</li>
+          <li>Layout adapts smoothly</li>
+          <li>No horizontal scrolling on mobile</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</body>
+</html>
