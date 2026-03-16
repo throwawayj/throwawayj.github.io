@@ -1664,3 +1664,10 @@ footer p {
     font-size: 0.65rem;
   }
 }
+
+/* Hide navigation when printing / generating PDF */
+@media print {
+  #navbar {
+    display: none !important;
+  }
+}
