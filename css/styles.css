@@ -589,6 +589,23 @@ body {
   font-style: italic;
 }
 
+#resume .job-item .job-details {
+  margin-top: var(--spacing-sm);
+  margin-left: 1.25rem;
+  list-style: disc;
+  color: var(--color-text-secondary);
+}
+
+#resume .job-item .job-details li {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-xs);
+}
+
+#resume .job-item .job-details li:last-child {
+  margin-bottom: 0;
+}
+
 /* Skills Section */
 #resume .skills-note {
   font-size: var(--font-size-sm);
