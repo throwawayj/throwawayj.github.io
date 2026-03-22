@@ -3,502 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="James D. Gardner - Personal resume website. WGU graduate specializing in automation.">
-  
-  <!-- Favicon -->
+  <meta name="description" content="James D. Gardner - Resume. DevOps engineer specializing in automation, CI/CD, and Kubernetes.">
+
   <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  
-  <!-- Stylesheet -->
+
   <link rel="stylesheet" href="css/styles.css">
-  
   <title>James D. Gardner - Resume</title>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav id="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#fun-facts">Fun Facts</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  
-  <!-- Main Content -->
-  <main>
-    <!-- About Section -->
-    <section id="about">
-      <div class="about-header">
-        <!-- Left side interests -->
-        <div class="interests-left">
-          <div class="interest-item">
-            <div class="interest-icon">
-              <i class="fas fa-book-open"></i>
-            </div>
-            <span>Learning</span>
-          </div>
-          <div class="interest-item">
-            <div class="interest-icon">
-              <i class="fas fa-book"></i>
-            </div>
-            <span>Reading</span>
-          </div>
-          <div class="interest-item">
-            <div class="interest-icon">
-              <i class="fas fa-gamepad"></i>
-            </div>
-            <span>Gaming</span>
-          </div>
-        </div>
-        
-        <!-- Center profile photo -->
-        <img src="images/me.jpg" alt="Profile photo of James D. Gardner" class="profile-photo">
-        
-        <!-- Right side interests -->
-        <div class="interests-right">
-          <div class="interest-item">
-            <div class="interest-icon">
-              <i class="fas fa-dumbbell"></i>
-            </div>
-            <span>Weight Lifting</span>
-          </div>
-          <div class="interest-item">
-            <div class="interest-icon">
-              <i class="fas fa-laptop-code"></i>
-            </div>
-            <span>Computers</span>
-          </div>
-          <div class="interest-item">
-            <div class="interest-icon">
-              <i class="fas fa-music"></i>
-            </div>
-            <span>Music</span>
-          </div>
-        </div>
-      </div>
-      
+  <main class="resume" id="top">
+    <header class="resume-header">
       <h1>James D. Gardner</h1>
-      <p>I like Automating things.</p>
-      
-      <div class="about-content">
-        <h3>Intro</h3>
-        <p>I started my career in I.T. as a helpdesk technician. Although this introductory position opened up new things to learn, I knew I wanted more. So I continued to learn as much as I could about I.T. and software development on the side. I pursued a degree in Information Technology and set my sights on becoming a systems administrator. After two years of helpdesk I was able to move up into a Jr. Systems Administrator position. I continued to learn as much as a could while at work, and on the side. Eventually learning how to script, I started automating my daily tasks. I found in scripting a passion for automation, which naturally led me to becoming a DevOps engineer. I enjoy breaking down tasks into small parts and finding ways to automate each step in a big task. This has led me to automate many things from daily tasks, deployments, and full CI/CD pipelines.</p>
-      </div>
-      
-      <div class="contact-links">
-        <a href="mailto:jclimb23@outlook.com"><i class="fas fa-envelope"></i> jclimb23@outlook.com</a>
-        <a href="https://www.linkedin.com/in/james-gardner-16b265a4/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      </div>
-    </section>
-    
-    <!-- Resume Section -->
-    <section id="resume">
-      <h2>Resume</h2>
-      
-      <!-- Education -->
-      <div class="education">
-        <h3>Education</h3>
-        <article class="degree-item">
-          <div class="school-logo wgu-logo">
-            <i class="fas fa-university"></i>
-          </div>
-          <div class="degree-content">
-            <h4>B.S. Information Technology</h4>
-            <p><a href="https://www.wgu.edu" target="_blank">Western Governors University</a>, 2013</p>
-          </div>
-        </article>
-        <article class="degree-item">
-          <div class="school-logo cu-logo">
-            <i class="fas fa-university"></i>
-          </div>
-          <div class="degree-content">
-            <h4>B.S. Music Industry Technology</h4>
-            <p><a href="https://www.ucdenver.edu/" target="_blank">University of Colorado, Denver</a>, 2010</p>
-          </div>
-        </article>
-        <article class="degree-item">
-          <div class="school-logo wwcc-logo">
-            <i class="fas fa-university"></i>
-          </div>
-          <div class="degree-content">
-            <h4>Associate of Arts in Music</h4>
-            <p><a href="https://www.westernwyoming.edu/" target="_blank">Western Wyoming Community College</a>, 2007</p>
-          </div>
-        </article>
-      </div>
-      
-      <!-- Experience -->
-      <div class="experience">
-        <h3>Experience</h3>
-        <article class="job-item">
-          <h4><a href="https://www.usana.com" target="_blank">Usana Health Sciences</a> - DevOps Engineer Level 3 (Senior)</h4>
-          <p class="daterange">March 2020 - Present</p>
-          <ul class="job-details">
-            <li>Work toward an automated, secure and scalable delivery pipeline</li>
-            <li>Work with Agile teams to streamline the development process</li>
-            <li>Develop deployment pipelines to Kubernetes using Helm</li>
-            <li>Linux, Kubernetes, Artifactory, Bamboo build server, Git, AWS Cloud and some Alibaba Cloud</li>
-            <li>Management of on-prem Kubernetes across 30+ environments. Also management of AWS self-managed EKS clusters with CloudFront, Network Load Balancers, S3, and Route&nbsp;53</li>
-            <li>Help migration of legacy applications to containerized microservices running in Kubernetes</li>
-            <li>Management of resources with Terraform</li>
-            <li>Migrated devops monitoring from AppDynamics to Dynatrace</li>
-            <li>I have written a few applications to aid the dev and QA teams to deploy feature branches to 30+ environments. These apps are written in Angular and React</li>
-            <li>Wrote a React application to manage the automation and deployment of releases for DevOps to staging and production environments</li>
-            <li>Collaborated with DBAs and implemented a deployment for containerized applications to use init containers in a Helm chart to automatically spin up databases on an MSSQL server and seed data to the tables. Once complete, the service would then start up and connect to the DB</li>
-          </ul>
-        </article>
-        <article class="job-item">
-          <h4><a href="http://www.cotiviti.com" target="_blank">Cotiviti</a> - DevOps Engineer</h4>
-          <p class="daterange">January 2015 - March 2020</p>
-          <ul class="job-details">
-            <li>The DevOps Engineer is responsible for the automation of operational tasks and process re-engineering</li>
-            <li>Architect, build, automate, and deploy new systems and applications from the VM layer up</li>
-            <li>Automate deployments of Java applications through environments by integrating Jira, StackStorm, Octopus, and Salt</li>
-            <li>Automate builds of in-house applications using Bamboo build server to create necessary RPMs</li>
-            <li>Re-engineer old deployment processes by working closely with the development and operations teams</li>
-            <li>Current tools: Bamboo, Jira, Octopus Deploy, Salt Stack; scripting: PowerShell, PowerCLI, Python, Bash, and PHP. Monitoring: Nagios, New Relic, AppDynamics</li>
-            <li>Manage all DevOps automation and configuration with Git</li>
-            <li>Design, deploy, integrate, and administer an ELK stack for centralized logging of all applications</li>
-          </ul>
-        </article>
-        <article class="job-item">
-          <h4>School Improvement Network - Systems Engineer</h4>
-          <p class="daterange">August 2014 - January 2015</p>
-        </article>
-        <article class="job-item">
-          <h4>School Improvement Network - Jr. Systems Engineer/Team Lead</h4>
-          <p class="daterange">June 2013 - August 2014</p>
-        </article>
-        <article class="job-item">
-          <h4>School Improvement Network - Helpdesk Technician Level 2</h4>
-          <p class="daterange">January 2013 - June 2013</p>
-        </article>
-        <article class="job-item">
-          <h4>Datamark - Helpdesk Technician Level 1</h4>
-          <p class="daterange">February 2011 - January 2013</p>
-        </article>
-        <article class="job-item">
-          <h4>Key Bank - Client Service Manager</h4>
-          <p class="daterange">January 2010 - February 2011</p>
-        </article>
-        <article class="job-item">
-          <h4>Key Bank - Customer Relations Representative (Teller)</h4>
-          <p class="daterange">October 2007 - January 2010</p>
-        </article>
-      </div>
-      
-      <!-- Skills -->
-      <div class="skills">
-        <h3>Skills</h3>
-        <p class="skills-note">Note: I think these sections are silly, but everyone seems to have one. Here is a *mostly* honest overview of my skills.</p>
-        
-        <div class="skill-item">
-          <div class="skill-name">Git</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 100%"></div>
-          </div>
-          <div class="skill-rating">5 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Bash</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 100%"></div>
-          </div>
-          <div class="skill-rating">5 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Bamboo/Bitbucket/Jira</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 80%"></div>
-          </div>
-          <div class="skill-rating">4 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Kubernetes</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 80%"></div>
-          </div>
-          <div class="skill-rating">4 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Linux/Centos/Redhat</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 80%"></div>
-          </div>
-          <div class="skill-rating">4 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Rabbitmq</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 80%"></div>
-          </div>
-          <div class="skill-rating">4 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Python</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 80%"></div>
-          </div>
-          <div class="skill-rating">4 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Javascript</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 60%"></div>
-          </div>
-          <div class="skill-rating">3 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Redis</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 60%"></div>
-          </div>
-          <div class="skill-rating">3 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">HTML/CSS</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 40%"></div>
-          </div>
-          <div class="skill-rating">2 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Amazon Web Services</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 20%"></div>
-          </div>
-          <div class="skill-rating">1 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Node.JS</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 20%"></div>
-          </div>
-          <div class="skill-rating">1 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">React</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 20%"></div>
-          </div>
-          <div class="skill-rating">1 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">Typescript</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 20%"></div>
-          </div>
-          <div class="skill-rating">1 / 5</div>
-        </div>
-        
-        <div class="skill-item">
-          <div class="skill-name">HashiCorp Vault</div>
-          <div class="skill-bar">
-            <div class="skill-level" style="width: 80%"></div>
-          </div>
-          <div class="skill-rating">4 / 5</div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Projects Section -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <p class="projects-intro">A selection of projects that I'm not too ashamed of</p>
-      
-      <div class="projects-grid">
-        <article class="project-item">
-          <img src="images/projects/k8sdeployapp.png" alt="Developer Deployment App" onclick="showProjectImage(this)">
-          <h3>Developer Deployment App</h3>
-          <p class="project-date">January, 2021</p>
-          <p>Built for all development teams to deploy 90+ applications to servers and kubernetes. Interfaces with Bamboo api and Consul api. Written with Angular/Javascript and a node.js backend</p>
-        </article>
-        
-        <article class="project-item">
-          <img src="images/projects/charonapp.png" alt="Devops Deployment App" onclick="showProjectImage(this)">
-          <h3>Devops Deployment App</h3>
-          <p class="project-date">January, 2021</p>
-          <p>Built for DevOps to cut release branches using Bitbucket API and Monitor builds with Bamboo Api. Also used for Deploying 90+ apps to pipeline environments. Written with Angular/Javascript</p>
-        </article>
-        
-        <article class="project-item">
-          <img src="images/projects/envcheckoutapp.png" alt="Environment Checkout App" onclick="showProjectImage(this)">
-          <h3>Environment Checkout App</h3>
-          <p class="project-date">January, 2021</p>
-          <p>An application to allow QA and Developers to checkout one of 30+ environments. Written in Angular/Javascript</p>
-        </article>
-      </div>
-      
-      <!-- Image Viewer -->
-      <div id="project-image-viewer" class="image-viewer" style="display: none;">
-        <div class="image-viewer-header">
-          <h3 id="viewer-title"></h3>
-          <button onclick="closeProjectImage()" class="close-button">&times;</button>
-        </div>
-        <div class="image-viewer-content">
-          <img id="viewer-image" src="" alt="">
-        </div>
-      </div>
-    </section>
-    
-    <!-- Fun Facts Section -->
-    <section id="fun-facts">
-      <h2>Fun Facts</h2>
-      
-      <div class="fun-facts-content">
-        <div class="fun-fact-item currently-section">
-          <div class="section-icon">
-            <i class="fas fa-briefcase"></i>
-          </div>
-          <h3>Currently</h3>
-          <p>At Usana, I have learned much in the way of Javascript, Angular, and React to help develop in house applications used by our developers. These apps help facilitate the ease of deployments to environments and increase velocity. I have spent alot of time refining the C.I./C.D. pipeline. Specifically integrating automated testing post deployment to eventually reach a true C.I./C.D. Kubernetes has also been a huge focus of my job at Usana. Setting up automated deployments with helm charts to provisioning locally hosted Kubernetes Clusters.</p>
-        </div>
-        
-        <div class="fun-fact-item history-section">
-          <div class="section-icon">
-            <i class="fas fa-history"></i>
-          </div>
-          <h3>Some History</h3>
-          <ul class="timeline-list">
-            <li><i class="fas fa-check-circle"></i> I come from a Customer Service background at Key Bank, which transfers very well to my interactions as a DevOps Engineer and working with Development Teams</li>
-            <li><i class="fas fa-check-circle"></i> While attending school at W.G.U I also worked as a helpdesk engineer. This allowed me to put into practice what I was learning in school.</li>
-            <li><i class="fas fa-check-circle"></i> I gained my love of automation while being a Systems Engineer and being bored of clicking everything in a gui</li>
-            <li><i class="fas fa-check-circle"></i> I am a certified Salt Stack Engineer</li>
-            <li><i class="fas fa-check-circle"></i> Vim > Nano :)</li>
-          </ul>
-        </div>
-        
-        <div class="fun-fact-item">
-          <h3>I Like</h3>
-          <ul class="interests-list">
-            <li><i class="fas fa-book-open"></i> Learning</li>
-            <li><i class="fas fa-book"></i> Reading</li>
-            <li><i class="fas fa-gamepad"></i> Gaming</li>
-            <li><i class="fas fa-dumbbell"></i> Weight Lifting</li>
-            <li><i class="fas fa-laptop-code"></i> Computers</li>
-            <li><i class="fas fa-music"></i> Music</li>
-          </ul>
-        </div>
-        
-        <div class="fun-fact-item travel-section">
-          <div class="travel-header">
-            <h3>Travel / Geography</h3>
-            <div class="state-icons">
-              <div class="state-icon">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>UT</span>
-              </div>
-              <div class="state-icon">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>WY</span>
-              </div>
-              <div class="state-icon">
-                <i class="fas fa-map-marker-alt"></i>
-                <span>CO</span>
-              </div>
-            </div>
-          </div>
-          <ul>
-            <li>I was born and raised in Utah, and still live in Utah. I have lived in other states like Wyoming and Colorado</li>
-            <li>I have never left America :( but really hope to one day. Furthest I have travelled is to North Carolina</li>
-          </ul>
-        </div>
-        
-        <div class="fun-fact-item">
-          <h3>Favorites</h3>
-          <div class="favorites-grid">
-            <div class="favorite-category">
-              <h4><i class="fas fa-book"></i> Books</h4>
-              <ul>
-                <li>A Christmas Carol</li>
-                <li>Ender's Game</li>
-                <li>The Name of the Wind</li>
-                <li>To Kill a Mockingbird</li>
-                <li>The Dark Forest</li>
-                <li>The Book of Mormon</li>
-                <li>The Stormlight Archive by Brandon Sanderson</li>
-                <li>Mistborn by Brandon Sanderson</li>
-              </ul>
-            </div>
-            
-            <div class="favorite-category">
-              <h4><i class="fas fa-gamepad"></i> Video Games</h4>
-              <ul>
-                <li>Rocket League</li>
-                <li>Portal 2</li>
-                <li>Final Fantasy IX</li>
-                <li>Shovel Knight</li>
-                <li>Donkey Kong Country</li>
-                <li>Kirby's Dreamland</li>
-                <li>Uncharted 2</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <div class="fun-fact-item mission-card">
-          <div class="mission-header">
-            <img src="images/church-logo.png" alt="Church of Jesus Christ of Latter-Day Saints Logo" class="church-logo">
-            <h3>Mission for the Church of Jesus Christ of Latter Day Saints</h3>
-          </div>
-          <p>Ventura California 2001-2003</p>
-        </div>
-        
-        <div class="fun-fact-item dream-section">
-          <div class="section-icon">
-            <i class="fas fa-cloud"></i>
-          </div>
-          <h3>I Dream Of</h3>
-          <ul>
-            <li>Living in a seaside town like Ketchikan, Alaska</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-    <!-- References Section -->
-    <section id="references">
-      <h2>References</h2>
-      <p>References are available upon request</p>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="contact-info">
+      <p class="tagline">I Like Automating Things.</p>
+      <p class="header-contact">
         <a href="mailto:jclimb23@outlook.com">jclimb23@outlook.com</a>
-        <a href="https://www.linkedin.com/in/james-gardner-16b265a4/" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-      </div>
+        <span class="contact-sep" aria-hidden="true"> · </span>
+        <a href="https://www.linkedin.com/in/james-gardner-16b265a4/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </header>
+
+    <section id="career-objective" class="resume-section">
+      <h2>Career Objective</h2>
+      <p>Senior DevOps engineer focused on secure, automated delivery pipelines and platform reliability. I aim to streamline development workflows, implement Kubernetes and cloud infrastructure, and build tooling that helps teams ship faster with confidence.</p>
+    </section>
+
+    <section id="technical-skills" class="resume-section">
+      <h2>Technical Skills</h2>
+      <p class="skills-inline">Git, Bash, Bamboo/Bitbucket/Jira, Artifactory, Kubernetes, Linux/CentOS/Red Hat, RabbitMQ, Python, JavaScript, Redis, HTML/CSS, EKS, CloudFront, Route53, S3, EC2, Node.js, React, HashiCorp Vault</p>
+    </section>
+
+    <section id="work-experience" class="resume-section">
+      <h2>Work Experience</h2>
+
+      <article class="job-item">
+        <h3><a href="https://www.usana.com" target="_blank" rel="noopener noreferrer">Usana Health Sciences</a> — DevOps Engineer Level 3 (Senior)</h3>
+        <p class="daterange">March 2020 – Present</p>
+        <ul class="job-details">
+          <li>During a data center migration from Salt Lake to Las Vegas I helped implement the use of IaC with Terraform for spinning up VMs across 30+ environments.</li>
+          <li>Collaborated with DBAs and implemented a deployment for containerized applications to use init containers in a Helm chart to automatically spin up databases on an MSSQL server and seed data to the tables. Once complete, the service would then start up and connect to the DB.</li>
+          <li>Helped to develop a build and deployment pipeline to Kubernetes using Helm which included the migration of legacy applications to containerized microservices running in Kubernetes.</li>
+          <li>I have written a few React and Angular applications to aid the dev and QA teams to deploy feature branches to 30+ environments.</li>
+        </ul>
+      </article>
+
+      <article class="job-item">
+        <h3><a href="http://www.cotiviti.com" target="_blank" rel="noopener noreferrer">Cotiviti</a> — DevOps Engineer</h3>
+        <p class="daterange">January 2015 – March 2020</p>
+        <ul class="job-details">
+          <li>Moved configuration management into a Salt Stack paradigm across all Java applications.</li>
+          <li>Implemented a blue/green deployment using StackStorm, Terraform, and Salt to spin up and down environment resources.</li>
+          <li>Designed, deployed, integrated, and administered an ELK stack for centralized logging of all applications.</li>
+          <li>Automated deployments of Java applications through environments by integrating Jira, StackStorm, Octopus, and Salt.</li>
+          <li>Fully migrated monitoring of apps and vms from zabbix to nagios</li>
+        </ul>
+      </article>
+
+      <article class="job-item job-item-compact">
+        <h3>School Improvement Network — Systems Engineer</h3>
+        <p class="daterange">August 2014 – January 2015</p>
+        <ul class="job-details">
+          <li>Managed 3rd party installs to Windows servers</li>
+          <li>Managed windows O.S. patching and updates</li>
+          <li>Maintained and updated our nagios monitoring system</li>
+          <li>Maintained the phone server used by customer service representatives by adding and updating phone routing logic</li>
+        </ul>
+      </article>
+      <article class="job-item job-item-compact">
+        <h3>School Improvement Network — Jr. Systems Engineer / Team Lead</h3>
+        <p class="daterange">June 2013 – August 2014</p>
+      </article>
+      <article class="job-item job-item-compact">
+        <h3>School Improvement Network — Helpdesk Technician Level 2</h3>
+        <p class="daterange">January 2013 – June 2013</p>
+      </article>
+      <article class="job-item job-item-compact">
+        <h3>Datamark — Helpdesk Technician Level 1</h3>
+        <p class="daterange">February 2011 – January 2013</p>
+      </article>
+      <article class="job-item job-item-compact">
+        <h3>Key Bank — Client Service Manager</h3>
+        <p class="daterange">January 2010 – February 2011</p>
+      </article>
+      <article class="job-item job-item-compact">
+        <h3>Key Bank — Customer Relations Representative (Teller)</h3>
+        <p class="daterange">October 2007 – January 2010</p>
+      </article>
+    </section>
+
+    <section id="education" class="resume-section">
+      <h2>Education</h2>
+      <ul class="education-list">
+        <li><strong>B.S. Information Technology</strong> — <a href="https://www.wgu.edu" target="_blank" rel="noopener noreferrer">Western Governors University</a>, 2013</li>
+        <li><strong>B.S. Music Industry Technology</strong> — <a href="https://www.ucdenver.edu/" target="_blank" rel="noopener noreferrer">University of Colorado, Denver</a>, 2010</li>
+        <li><strong>Associate of Arts in Music</strong> — <a href="https://www.westernwyoming.edu/" target="_blank" rel="noopener noreferrer">Western Wyoming Community College</a>, 2007</li>
+      </ul>
     </section>
   </main>
-  
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 James D. Gardner. All rights reserved.</p>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 James D. Gardner</p>
   </footer>
-  
-  <!-- JavaScript -->
+
   <script src="js/main.js"></script>
 </body>
 </html>
