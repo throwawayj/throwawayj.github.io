@@ -172,6 +172,23 @@ a:focus-visible {
   background: var(--color-header-glow);
 }
 
+.header-linkedin {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  color: var(--color-muted);
+  word-break: break-all;
+}
+
+.header-linkedin a {
+  color: var(--color-accent-dark);
+  font-weight: 500;
+}
+
+.header-linkedin a:hover {
+  text-decoration: underline;
+}
+
 .resume-header .tagline {
   font-size: 1.1rem;
   color: var(--color-muted);
@@ -180,19 +197,11 @@ a:focus-visible {
   font-weight: 500;
 }
 
-.header-contact {
+.header-email {
   margin: 0;
-  font-size: 0.95rem;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
-  gap: var(--space-sm) var(--space-md);
-}
-
-.contact-sep {
-  color: var(--color-border);
-  font-weight: 300;
+  width: 100%;
 }
 
 .contact-link {
@@ -203,9 +212,18 @@ a:focus-visible {
   color: var(--color-accent-dark);
 }
 
+.contact-prefix {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .contact-link:hover {
   background: rgba(37, 99, 235, 0.18);
   text-decoration: none;
+  color: var(--color-text);
+}
+
+.contact-link:hover .contact-prefix {
   color: var(--color-text);
 }
 
@@ -434,6 +452,7 @@ a:focus-visible {
     padding: 0;
     color: #000 !important;
   }
+
 
   #work-experience .job-item {
     margin-bottom: 0.16in;
