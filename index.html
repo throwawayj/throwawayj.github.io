@@ -54,11 +54,32 @@
         <span class="skill-tag">Node.js</span>
         <span class="skill-tag">React</span>
         <span class="skill-tag">HashiCorp Vault</span>
+        <span class="skill-tag">Terraform / Terraform Enterprise</span>
+        <span class="skill-tag">TrueFoundry</span>
+        <span class="skill-tag">Amazon Bedrock / AgentCore</span>
+        <span class="skill-tag">Istio</span>
+        <span class="skill-tag">Argo CD</span>
+        <span class="skill-tag">GitHub Actions (OIDC)</span>
+        <span class="skill-tag">IAM</span>
       </div>
     </section>
 
     <section id="work-experience" class="resume-section">
       <h2>Work Experience</h2>
+
+      <article class="job-item">
+        <h3><a href="https://www.usana.com" target="_blank" rel="noopener noreferrer">Usana Health Sciences</a> — Platform Engineer</h3>
+        <p class="daterange">September 2026 – Present</p>
+        <ul class="job-details">
+          <li>Built USANA's production TrueFoundry AI platform on AWS using Terraform and Terraform Enterprise. This covers a dedicated AWS account with SSO access and a hardened baseline, a VPC attached to the shared Transit Gateway, VPC endpoints, a private Route 53 zone and ACM certificates.</li>
+          <li>Provisioned a private EKS cluster for the AI gateway plane and a separate compute-plane cluster. The compute plane runs Argo CD, Istio, the AWS Load Balancer Controller, KMS-encrypted secrets and enforced NetworkPolicy.</li>
+          <li>Rolled out the TrueFoundry AI Gateway with Helm and keep it upgraded. Gave it Bedrock model access and cross-role access to Bedrock AgentCore agents, and added a Bedrock AgentCore VPC endpoint so that traffic stays private.</li>
+          <li>Built trace storage for the AI gateway: versioned, access-logged S3 buckets with restricted cross-account roles.</li>
+          <li>Set up CI/CD identity for the platform, including GitHub Actions OIDC roles for TrueFoundry config and MCP server deployments, a scoped read-only validator role for PR dry runs, and least-privilege roles for the platform's TrueFoundry token.</li>
+          <li>Decommissioned the TrueFoundry proof-of-concept network and public DNS records once the production environment replaced it.</li>
+          <li>Applied the company tagging standard and least-privilege IAM across all new infrastructure.</li>
+        </ul>
+      </article>
 
       <article class="job-item">
         <h3><a href="https://www.usana.com" target="_blank" rel="noopener noreferrer">Usana Health Sciences</a> — DevOps Engineer Level 3 (Senior)</h3>
