@@ -290,6 +290,22 @@ a:focus-visible {
   }
 }
 
+/* Skills still being built: outlined instead of filled */
+.skills-subheading {
+  margin: var(--space-xl) 0 var(--space-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-muted);
+}
+
+.skill-tag--growing {
+  background: transparent;
+  color: var(--color-accent-dark);
+  border: 1px dashed var(--color-accent-dark);
+  box-shadow: none;
+}
+
 /* Jobs */
 #work-experience .job-item {
   margin-bottom: var(--space-xl);
@@ -445,6 +461,17 @@ a:focus-visible {
     box-shadow: none;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+  }
+
+  .skill-tag--growing {
+    background: transparent !important;
+    border: 1px dashed #2563eb !important;
+    color: #1d4ed8;
+  }
+
+  .skills-subheading {
+    margin: 0.1in 0 0.05in;
+    font-size: 8.5pt;
   }
 
   .contact-link {
